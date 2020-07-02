@@ -90,6 +90,7 @@ async def shuffle_start(ctx, channel: discord.VoiceChannel, category: discord.Ca
                 it = 0
         while it < len(groups):
             groups[it].append(None)
+            it+=1
         groups = np.array(groups)
         shuffleState.array = groups
         shuffleState.channels = []
