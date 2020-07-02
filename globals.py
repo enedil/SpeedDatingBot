@@ -7,9 +7,7 @@ class ShuffleState():
         self.array = []
 
     def shuffle(self):
-        self.array = np.array(
-            [np.roll(group, i) for i, group in enumerate(self.array)]
-        ).transpose()
+        self.array = list(zip(*[np.roll(group, i) for i, group in enumerate(self.array)]))
 
 
 def init_globals():
