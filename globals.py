@@ -6,8 +6,6 @@ class ShuffleState():
     def __init__(self):
         self.array = []
         
-    def _roll(self, group, i):
-        
 
     def shuffle(self):
         self.array = list(zip(*[group[i:] + group[:i] for i, group in enumerate(self.array)]))
